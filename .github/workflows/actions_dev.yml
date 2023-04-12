@@ -28,14 +28,14 @@ jobs:
         ls -l ~/.ssh/
     - name: Download config file and replace
       run: |
-        git clone git@github.com:moxi624/mogu_prod_configuration.git
-        mv -f ./mogu_prod_configuration/dev_config/mogu_admin/application.yml ./mogu_admin/src/main/resources/application.yml
-        mv -f ./mogu_prod_configuration/dev_config/mogu_picture/application.yml ./mogu_picture/src/main/resources/application.yml
-        mv -f ./mogu_prod_configuration/dev_config/mogu_sms/application.yml ./mogu_sms/src/main/resources/application.yml
-        mv -f ./mogu_prod_configuration/dev_config/mogu_web/application.yml ./mogu_web/src/main/resources/application.yml
-        mv -f ./mogu_prod_configuration/dev_config/mogu_search/application.yml ./mogu_search/src/main/resources/application.yml
-        mv -f ./mogu_prod_configuration/dev_config/vue_mogu_admin/prod.env.js ./vue_mogu_admin/config/prod.env.js
-        mv -f ./mogu_prod_configuration/dev_config/vue_mogu_web/prod.env.js ./vue_mogu_web/config/prod.env.js
+        git clone git@github.com:pailli/mogu_blog_configration.git
+        mv -f ./mogu_blog_configration/dev_config/mogu_admin/application.yml ./mogu_admin/src/main/resources/application.yml
+        mv -f ./mogu_blog_configration/dev_config/mogu_picture/application.yml ./mogu_picture/src/main/resources/application.yml
+        mv -f ./mogu_blog_configration/dev_config/mogu_sms/application.yml ./mogu_sms/src/main/resources/application.yml
+        mv -f ./mogu_blog_configration/dev_config/mogu_web/application.yml ./mogu_web/src/main/resources/application.yml
+        mv -f ./mogu_blog_configration/dev_config/mogu_search/application.yml ./mogu_search/src/main/resources/application.yml
+        mv -f ./mogu_blog_configration/dev_config/vue_mogu_admin/prod.env.js ./vue_mogu_admin/config/prod.env.js
+        mv -f ./mogu_blog_configration/dev_config/vue_mogu_web/prod.env.js ./vue_mogu_web/config/prod.env.js
     - name: Build Java jar
       run: | 
         mvn clean install
