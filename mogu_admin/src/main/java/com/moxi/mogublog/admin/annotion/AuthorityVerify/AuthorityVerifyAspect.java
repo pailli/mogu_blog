@@ -46,7 +46,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class AuthorityVerifyAspect {
 
-    //test auto-deploy 1
+    //test auto-deploy 2
     @Autowired
     CategoryMenuService categoryMenuService;
 
