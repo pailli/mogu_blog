@@ -29,7 +29,11 @@ jobs:
     - name: Download config file
       run: |
         git clone git@github.com:pailli/mogu_blog_configration.git
-        pwd
+        cd mogu_blog_configration
+        ls
+        cd dev_config
+        ls
+        cd mogu_admin
         ls
     - name: replace config file
       run: |
