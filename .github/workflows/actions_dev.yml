@@ -30,6 +30,7 @@ jobs:
       run: |
         git clone git@github.com:pailli/mogu_blog_configration.git
     - name: replace config file
+      run: |
         mv -f ./mogu_blog_configration/dev_config/mogu_admin/application.yml ./mogu_admin/src/main/resources/application.yml
         mv -f ./mogu_blog_configration/dev_config/mogu_picture/application.yml ./mogu_picture/src/main/resources/application.yml
         mv -f ./mogu_blog_configration/dev_config/mogu_sms/application.yml ./mogu_sms/src/main/resources/application.yml
