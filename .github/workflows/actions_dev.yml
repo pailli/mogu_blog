@@ -63,7 +63,7 @@ jobs:
         mv ./vue_mogu_web/dist ./transfer_files/web_dist
         mv ./vue_mogu_admin/dist ./transfer_files/admin_dist
         tar -zcvf  transfer_files.tar.gz transfer_files/
-    - name: Scp file to aliyun
+    - name: Scp file to server
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.DOCKER_IP_DEV }}
