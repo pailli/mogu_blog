@@ -26,17 +26,9 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         chmod 700 ~/.ssh && chmod 700 ~/.ssh/*
         ls -l ~/.ssh/
-    - name: Download config file
+    - name: Download config file and replace
       run: |
         git clone git@github.com:pailli/mogu_blog_configration.git
-        cd mogu_blog_configration
-        ls
-        cd dev_config
-        ls
-        cd mogu_admin
-        ls
-    - name: replace config file
-      run: |
         mv -f ./mogu_blog_configration/dev-config/mogu_admin/application.yml ./mogu_admin/src/main/resources/application.yml
         mv -f ./mogu_blog_configration/dev-config/mogu_picture/application.yml ./mogu_picture/src/main/resources/application.yml
         mv -f ./mogu_blog_configration/dev-config/mogu_sms/application.yml ./mogu_sms/src/main/resources/application.yml
