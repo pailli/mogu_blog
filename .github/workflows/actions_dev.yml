@@ -20,15 +20,16 @@ jobs:
     - name: Set SSH Environment
       run: |
         mkdir -p ~/.ssh/
-        echo "${{ secrets.ID_RSA }}" > ~/.ssh/id_rsa
-        echo "${{ secrets.ID_RSA_PUB }}" > ~/.ssh/id_rsa.pub
+        echo "${{ secrets.ID_RSA }}" >> ~/.ssh/id_rsa
+        echo "${{ secrets.ID_RSA_PUB }}" >> ~/.ssh/id_rsa.pub
         cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
         chmod 600 ~/.ssh/id_rsa
         chmod 700 ~/.ssh && chmod 700 ~/.ssh/*
         ls -l ~/.ssh/
-    - name: Download config file and replace
+    - name: Download config file
       run: |
         git clone git@github.com:pailli/mogu_blog_configration.git
+    - name: replace config file
         mv -f ./mogu_blog_configration/dev_config/mogu_admin/application.yml ./mogu_admin/src/main/resources/application.yml
         mv -f ./mogu_blog_configration/dev_config/mogu_picture/application.yml ./mogu_picture/src/main/resources/application.yml
         mv -f ./mogu_blog_configration/dev_config/mogu_sms/application.yml ./mogu_sms/src/main/resources/application.yml
